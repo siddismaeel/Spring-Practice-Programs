@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean id="data" class="com.ismaeel.looseCoupling.DataService"/>
+<bean id="missedCallAlert" class="com.ismaeel.looseCoupling.MissedCallAlertService"/>
+<bean id="helloTu0ne" class="com.ismaeel.looseCoupling.HelloTuneService"/>
+
+<bean id="airtel" class="com.ismaeel.looseCoupling.Airtel">
+
+<property name="service" ref="missedCallAlert"/>
+
+</bean>
+
+
+</beans>
